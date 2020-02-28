@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './App.scss';
+import Users from './user';
+import { Provider } from 'react-redux';
 
-function App() {
+import store from './store';
+
+const App = () => {
+  const [users, setUSers] = useState([
+    { id: 1, name: 'witalo' },
+    { id: 2, name: 'marcelo' },
+    { id: 3, name: 'carlos' },
+  ])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <Users />
+      </div>
+    </Provider>
   );
 }
 
