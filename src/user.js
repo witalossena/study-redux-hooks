@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 
 export default function User({ user }) {
-    const [myuser, setUser] = useState();
+    const [myuser, setUser] = useState('');
+
     const courses = useSelector(state => state.data);
     const dispatch = useDispatch();
 
@@ -11,26 +12,27 @@ export default function User({ user }) {
 
     const addCourse = () => {
         dispatch({ type: 'ADD_COURSE', title: myuser })
+        setUser('');
     }
 
 
+  
     const teste = (e) => {
         setUser(e.target.value)
     }
+
+  
 
     return (
         <div className="container">
             <ul>
                 {courses.map(course => <li key={course}>{course}</li>)}
             </ul>
-
-            <input type="text" onChange={teste} />
-
-
-
+            <input type="text" onChange={teste} value={myuser} />
             <button type="button" onClick={addCourse}>
-                adicionar curso
+                add course
             </button>
+
         </div>
 
     );
