@@ -14,12 +14,13 @@ const Burguer = styled.ul`
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 4rem;
+    top: 5rem;
     right: 0;
     left: 0;
     justify-content: flex-start;
     align-items: center;
     transform: ${({ open }) => open ? 'translate(0)' : 'translate(-100%)'};
+    opacity: 0.5;
   }
 }`;
 
@@ -47,8 +48,6 @@ const Header = () => {
           <li className="nav-item">
             <a href="/" className="nav-link">lost dogs</a>
           </li>
-
-
         </Burguer>
         <ul className="navbar-nav">
           <li className="nav-item">

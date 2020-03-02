@@ -1,16 +1,17 @@
 import React from 'react';
-import './App.scss';
-// import Person from './person';
-// import { Provider } from 'react-redux';
 import Home from './Home';
-
-
-// import store from './store';
+import { theme } from './theme';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from './global';
 
 const App = () => {
-
   return (
-    <Home />
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyles />
+        <Home />
+      </>
+    </ThemeProvider>
   );
 }
 
