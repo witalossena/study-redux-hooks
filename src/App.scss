@@ -1,6 +1,20 @@
-.container{
-    width: 100%;
-    max-width: 492px;
-    margin: 0 auto;
-    padding: 0.5rem;
+.container {
+  width: 100%;
+  max-width: 492px;
+  margin: 0 auto;
+  padding: 0.5rem;
 }
+
+a {
+  color: #fafafa;
+  transition: 0.3s;
+  text-decoration: none;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+li{
+  list-style-type: none;
+}
+
