@@ -39,11 +39,6 @@ export const GlobalStyles = createGlobalStyle`
     list-style-type: none;
   }
 
-  .container {
-    width: 100%;
-    max-width:  ${({ theme }) => theme.mobile};
-    margin: 0 auto;
-    padding: 0.5rem;
-  }
+
   
 `
