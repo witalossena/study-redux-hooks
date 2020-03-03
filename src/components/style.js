@@ -7,6 +7,8 @@ export const Container = styled.div`
     padding: 0.5rem;      
     text-align: ${props => props.textCenter ? "center" : ""};
     padding-top: ${props => props.pt1 ? "5rem" : "1rem"};
+    display:flex;
+    flex-direction: column;
 `;
 
 export const InputButton = styled.input`

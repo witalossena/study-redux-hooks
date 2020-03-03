@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {   
     color: ${({ theme }) => theme.primaryDark};
+    height: 800vh;
     text-rendering: optimizeLegibility;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
