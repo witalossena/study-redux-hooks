@@ -80,7 +80,10 @@ const Form = () => {
 
 
     if (display === true) {
-        return <Pdf name={dog.name} description={dog.description} />
+        return <Pdf name={dog.name}
+            race={dog.race}
+            disappearance={dog.disappearance}
+            description={dog.description} />
     }
 
     return (

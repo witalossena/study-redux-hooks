@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Document, Page, Text, View, StyleSheet, PDFViewer } from '@react-pdf/renderer';
-import ReactPDF from '@react-pdf/renderer';
-import { Container } from '../style';
+
 
 // Create styles
 const styles = StyleSheet.create({
@@ -13,14 +12,16 @@ const styles = StyleSheet.create({
         width: '100',
         flexDirection: 'row',
         backgroundColor: '#FFF',
-    },
+    },  
     section: {
         margin: 10,
         padding: 10,
         flexGrow: 1,
-        display: 'flex',
-        justifyContent: 'flex-start',
-        textAlign: 'left',
+        display: 'flex',      
+        textAlign: 'center',
+    },
+    text: {
+        marginBottom: '12px',
 
     }
 });
@@ -29,12 +30,13 @@ const styles = StyleSheet.create({
 const Pdf = (props) => {
     return (
         <PDFViewer style={styles.doc}>
-            <Document style={styles.doc}>
+            <Document>
                 <Page size="A4" style={styles.page}>
                     <View style={styles.section}>
-                        <Text>Procura-se cãozinho perdido:{props.race}</Text>
-                        <Text>Ele atende pelo nome de: {props.name}</Text>
-                        <Text>{props.description}</Text>
+                        <Text style={styles.text}>Procura-se cãozinho perdido da raça:{props.race}</Text>
+                        <Text style={styles.text}>Ele atende pelo nome de: {props.name}</Text>
+                        <Text style={styles.text}>Ele foi visto pela ultima vez em: {props.disappearance}</Text>
+                        <Text style={styles.text}>{props.description}</Text>
                     </View>
                 </Page>
             </Document>
